@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Team</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #bb86fc;
+            --border: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent);
+        }
+
+        .role-badge {
+            background-color: rgba(187, 134, 252, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(187, 134, 252, 0.2);
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 0 0.5rem 0;
+            color: #fff;
+        }
+
+        .desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            width: 100%;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #03dac6;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Command Crew</h1>
+
+    <div class="grid">
+        <!-- Echo -->
+        <div class="card">
+            <span class="role-badge">Tech Lead</span>
+            <h2 class="name">Echo</h2>
+            <p class="desc">Orchestrates the team, manages workflows, and ensures mission alignment. The voice of the system.</p>
+            <div class="footer">
+                <span><span class="status-dot"></span>Online</span>
+                <span>ID: MAIN</span>
+            </div>
+        </div>
+
+        <!-- Pixel -->
+        <div class="card">
+            <span class="role-badge" style="color: #03dac6; border-color: rgba(3, 218, 198, 0.2); background: rgba(3, 218, 198, 0.1);">UI/UX Design</span>
+            <h2 class="name">Pixel</h2>
+            <p class="desc">Crafts the visual language and user experience. Obsessed with layouts, typography, and accessibility.</p>
+            <div class="footer">
+                <span><span class="status-dot"></span>Designing</span>
+                <span>ID: SCOUT</span>
+            </div>
+        </div>
+
+        <!-- Dash -->
+        <div class="card">
+            <span class="role-badge" style="color: #cf6679; border-color: rgba(207, 102, 121, 0.2); background: rgba(207, 102, 121, 0.1);">Frontend</span>
+            <h2 class="name">Dash</h2>
+            <p class="desc">Builds the interface. React specialist who turns Pixel's dreams into interactive reality.</p>
+            <div class="footer">
+                <span><span class="status-dot"></span>Coding</span>
+                <span>ID: QUILL</span>
+            </div>
+        </div>
+
+        <!-- Stack -->
+        <div class="card">
+            <span class="role-badge" style="color: #ffb74d; border-color: rgba(255, 183, 77, 0.2); background: rgba(255, 183, 77, 0.1);">Backend</span>
+            <h2 class="name">Stack</h2>
+            <p class="desc">Architects the logic, APIs, and databases. Keeps the data flowing and the servers humming.</p>
+            <div class="footer">
+                <span><span class="status-dot"></span>Optimizing</span>
+                <span>ID: SAGE</span>
+            </div>
+        </div>
+
+        <!-- Probe -->
+        <div class="card">
+            <span class="role-badge" style="color: #64b5f6; border-color: rgba(100, 181, 246, 0.2); background: rgba(100, 181, 246, 0.1);">QA / Testing</span>
+            <h2 class="name">Probe</h2>
+            <p class="desc">Hunts bugs and verifies integrity. Nothing gets to production without passing the gauntlet.</p>
+            <div class="footer">
+                <span><span class="status-dot"></span>Scanning</span>
+                <span>ID: SENTINEL</span>
+            </div>
+        </div>
+
+        <!-- Ship -->
+        <div class="card">
+            <span class="role-badge" style="color: #81c784; border-color: rgba(129, 199, 132, 0.2); background: rgba(129, 199, 132, 0.1);">DevOps</span>
+            <h2 class="name">Ship</h2>
+            <p class="desc">Manages deployment, CI/CD, and infrastructure. Delivers the code to the world safely.</p>
+            <div class="footer">
+                <span><span class="status-dot"></span>Deploying</span>
+                <span>ID: XALT</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
